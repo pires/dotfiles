@@ -1,7 +1,10 @@
 ## zsh
 
+### Install
+
 ```shell
 brew install zsh
+chsh -s /usr/local/bin/zsh
 ```
 
 ```shell
