@@ -6,7 +6,7 @@ export LANG=en_US.UTF-8
 
 # tmux integration
 ZSH_TMUX_AUTOSTART=true
-#ZSH_TMUX_ITERM2=true
+ZSH_TMUX_ITERM2=false
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/pires/.oh-my-zsh"
@@ -127,9 +127,9 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_INSTALL_CLEANUP=1
 
 # gpg=agent
-#eval $(gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info -q 2>/dev/null)
-#export GPG_TTY=$(tty)
-#export GPG_AGENT_INFO
+eval $(gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info -q 2>/dev/null)
+export GPG_TTY=$(tty)
+export GPG_AGENT_INFO
 
 # Go
 export GOPATH=$HOME/work/projects/go
