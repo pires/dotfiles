@@ -29,7 +29,11 @@ cp .zshrc ~/
 This will be overwritten by `oh-my-zsh`  the first time `zsh` runs but there's a backup you should put back, or just overwrite from here.
 
 ```shell
-cp .tmux/.tmux.conf .
+cd
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
+
+cp path/to/.tmux.conf .tmux/.tmux.conf.local
 ```
 
 Now, restart all your terminals.
