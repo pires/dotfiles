@@ -15,10 +15,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ```shell
 brew tap homebrew/cask-fonts
-brew cask install font-menlo-for-powerline
+brew cask install font-meslo-for-powerline
 ```
 
-Change font to Menlo 12pt.
+Change font to Meslo LG L Regular for Powerline 12pt.
 
 ### Use
 
