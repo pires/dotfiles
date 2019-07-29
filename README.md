@@ -11,11 +11,19 @@ chsh -s /usr/local/bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
+### iTerm2
+
 ```shell
 brew tap homebrew/cask-fonts
 brew cask install font-menlo-for-powerline
 ```
 
-```
+Change font to Menlo 12pt.
+
+### Use
+
+```shell
 cp .zshrc ~/
 ```
+
+Now, restart all your terminals.
