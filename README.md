@@ -3,7 +3,7 @@
 ### Install
 
 ```shell
-brew install zsh
+brew install zsh tmux
 chsh -s /usr/local/bin/zsh
 ```
 
@@ -24,6 +24,12 @@ Change font to Menlo 12pt.
 
 ```shell
 cp .zshrc ~/
+```
+
+This will be overwritten by `oh-my-zsh`  the first time `zsh` runs but there's a backup you should put back, or just overwrite from here.
+
+```shell
+cp .tmux/.tmux.conf .
 ```
 
 Now, restart all your terminals.
