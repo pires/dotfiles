@@ -134,6 +134,8 @@ export GPG_AGENT_INFO
 # Go
 export GOPATH=$HOME/work/projects/go
 export GO=/usr/local/opt/go
+export GOPROXY=https://proxy.golang.org
+
 export PATH=$GO/bin:$GO/libexec/bin:$GOPATH/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Remove username@hostname from prompt
