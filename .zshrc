@@ -87,10 +87,16 @@ plugins=(
   gpg-agent
   kubectl
   osx
+  ssh-agent
   tmux
   vscode
   zsh_reload
 )
+
+# For more info read https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/ssh-agent
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent identities id_rsa id_ed25519
+zstyle :omz:plugins:ssh-agent lifetime 24h
 
 source $ZSH/oh-my-zsh.sh
 
