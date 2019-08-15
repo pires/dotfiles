@@ -94,3 +94,6 @@ let g:go_info_mode='gopls'
 Plugin 'scrooloose/nerdtree'
 
 map <C-n> :NERDTreeToggle<CR>
+
+" tmux pane integration
+Plugin 'christoomey/vim-tmux-navigator'
