@@ -279,7 +279,8 @@ tmux_conf_copy_to_os_clipboard=true
 set -g history-limit 10000
 
 # start with mouse mode enabled
-set -g mouse on
+setw -g mouse on
+# set -g mouse-select-pane on
 setw -g alternate-screen on
 
 # force Vi mode
