@@ -303,12 +303,36 @@ set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 
 # Resurrect & Continuum
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin 'tmux-plugins/tmux-continuum'
 
+#####################################
+# tmux-resurrect - save and reload sessions and windows after a restart
+# https://github.com/tmux-plugins/tmux-resurrect
+# Default keybinds : save - command + c + s && restore command + c + r
+######################################
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+### tmux-resurrect extra settings ###
+# keep vim sessions after reboot
+set -g @resurrect-strategy-vim 'session'
+# keep pane contents
+set -g @resurrect-capture-pane-contents 'on'
+# restore bash history
+set -g @resurrect-save-bash-history 'on'
+### /tmux-resurrect extra settings ###
+
+######################################
+# tmux-continuum - automatically save and restore tmux sessions
+# https://github.com/tmux-plugins/tmux-continuum
+#####################################
+set -g @plugin 'tmux-plugins/tmux-continuum'
+# Restore last saved enviroment
+set -g @continuum-restore 'on'
+# Set autosave interval
+set -g @continuum-save-interval '5'
+# Show continiuum state in statusbar
+#set -g status-right 'Continuum status: #{continuum_status}'
+# Autoboot
 set -g @continuum-boot 'on'
 set -g @continuum-boot-options 'iterm,fullscreen'
-set -g @continuum-restore 'on'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
