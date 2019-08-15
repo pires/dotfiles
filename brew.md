@@ -8,9 +8,6 @@ bash-completion
 bazel
 cmake
 ctags
-docker
-docker-machine
-docker-machine-driver-hyperkit
 gdbm
 gettext
 git
