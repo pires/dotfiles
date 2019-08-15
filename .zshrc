@@ -132,7 +132,7 @@ export GPG_TTY=$(tty)
 export GPG_AGENT_INFO
 
 # Go
-export GOPATH=$HOME/work/projects/go
+export GOPATH=$HOME/work/go
 export GO=/usr/local/opt/go
 export GOPROXY=https://proxy.golang.org
 
