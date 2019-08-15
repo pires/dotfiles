@@ -6,10 +6,8 @@ awk
 bash
 bash-completion
 bazel
-cfssl
 cmake
 ctags
-dep
 docker
 docker-machine
 docker-machine-driver-hyperkit
@@ -23,7 +21,6 @@ gnu-tar
 gnu-time
 go
 gotags
-gradle
 htop
 hyperkit
 jpeg
@@ -39,9 +36,7 @@ libunistring
 libyaml
 lua
 make
-maven
 mercurial
-micro
 ncurses
 oniguruma
 openssl
@@ -50,8 +45,8 @@ pcre
 pcre2
 perl
 pre-commit
-protobuf
 python
+protobuf
 python3
 python@2
 readline
@@ -60,7 +55,6 @@ ruby
 sha2
 skaffold
 sqlite
-terraform
 tmux
 vim
 watch
