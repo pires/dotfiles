@@ -316,7 +316,7 @@ set -g @resurrect-strategy-vim 'session'
 # keep pane contents
 set -g @resurrect-capture-pane-contents 'on'
 # restore bash history
-set -g @resurrect-save-bash-history 'on'
+set -g @resurrect-save-shell-history 'on'
 ### /tmux-resurrect extra settings ###
 
 # https://github.com/tmux-plugins/tmux-continuum
