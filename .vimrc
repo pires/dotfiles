@@ -17,6 +17,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 " More options
+set backspace=indent,eol,start
 set cursorline
 set expandtab
 set modelines=0
@@ -28,7 +29,8 @@ set encoding=utf-8
 set fileencoding=utf-8
 set tabstop=2
 set smartindent
-set nowrap
+"set nowrap
+set linebreak
 set number
 set nowritebackup
 set noswapfile
