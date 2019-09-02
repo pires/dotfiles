@@ -28,7 +28,7 @@ set ttyscroll=10
 set encoding=utf-8
 set fileencoding=utf-8
 set tabstop=2
-set smartindent
+"set smartindent
 "set nowrap
 set linebreak
 set number
