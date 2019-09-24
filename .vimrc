@@ -10,11 +10,16 @@ Bundle 'gmarik/vundle'
 " Appearance
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tomasr/molokai'
 
 " See https://github.com/vim-airline/vim-airline/wiki/Screenshots
 let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+colorscheme molokai
+"let g:molokai_original = 1
+let g:rehash256 =1
 
 " More options
 set backspace=indent,eol,start
