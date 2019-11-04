@@ -279,8 +279,8 @@ tmux_conf_copy_to_os_clipboard=true
 set -g @tpm_plugins '            \
   tmux-plugins/tpm               \
   tmux-plugins/tmux-sensible     \
-  tmux-plugins/tmux-resurrect    \
   tmux-plugins/tmux-continuum    \
+  tmux-plugins/tmux-resurrect    \
   christoomey/vim-tmux-navigator \
 '
 
@@ -332,11 +332,9 @@ set -g @resurrect-save-shell-history 'on'
 # Restore last saved enviroment
 set -g @continuum-restore 'on'
 # Set autosave interval
-set -g @continuum-save-interval '1'
-# Show continiuum state in statusbar
-set -g status-right 'Continuum status: #{continuum_status}'
+set -g @continuum-save-interval '15'
 # Autoboot
-set -g @continuum-boot 'on'
+set -g @continuum-boot 'off'
 set -g @continuum-boot-options 'iterm,fullscreen'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
