@@ -28,12 +28,6 @@
 	prune = true
 [pull]
 	prune = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [commit]
 	gpgsign = true
 [tag]
@@ -42,3 +36,5 @@
 	program = gitsign
 [gitsign]
 	connectorID = https://github.com/login/oauth
+[gpg]
+	format = x509
