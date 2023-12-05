@@ -1,87 +1,11 @@
-## brew
+All that is required to install what we need is to run:
 
 ```shell
-$ brew list -1
-awk
-bash
-bash-completion
-bazel
-cmake
-ctags
-gdbm
-gettext
-git
-git-flow
-git-lfs
-gnu-sed
-gnu-tar
-gnu-time
-go
-gotags
-htop
-hyperkit
-jpeg
-jq
-kind
-kubernetes-cli
-kustomize
-libev
-libevent
-libidn2
-libtool
-libunistring
-libyaml
-lua
-make
-mercurial
-ncurses
-oniguruma
-openssl
-p7zip
-pcre
-pcre2
-perl
-pre-commit
-python
-protobuf
-python3
-python@2
-readline
-reattach-to-user-namespace
-ruby
-sha2
-skaffold
-sqlite
-tmux
-vim
-watch
-wget
-xz
-zsh
+$ brew bundle
 ```
 
-```shell
-$ brew cask list -1
-android-platform-tools
-docker
-font-menlo-for-powerline
-font-meslo-for-powerline
-font-roboto
-font-roboto-mono-for-powerline
-google-cloud-sdk
-horndis
-keepingyouawake
-minikube
-oracle-jdk
-osxfuse
-```
+The `Brewfile` is generated with:
 
 ```shell
-$ brew tap -1
-bazelbuild/tap
-cblecker/tap
-homebrew/cask
-homebrew/cask-fonts
-homebrew/core
-homebrew/services
+$ brew bundle dump --brews --cask --tap
 ```
