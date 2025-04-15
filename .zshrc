@@ -1,6 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # tmux integration
 ZSH_TMUX_AUTOSTART=true
 
@@ -41,7 +38,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -74,6 +71,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+	1password
 	colored-man-pages
 	command-not-found
 	extract
@@ -87,7 +85,7 @@ plugins=(
 
 # For more info read https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/ssh-agent
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_rsa id_ed25519
+zstyle :omz:plugins:ssh-agent identities id_ed25519
 zstyle :omz:plugins:ssh-agent lifetime 24h
 
 source $ZSH/oh-my-zsh.sh
@@ -100,11 +98,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -117,9 +111,19 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias k="kubectl"
 
 # kubectl completion
 source <(kubectl completion zsh)
 
 # Remove username@hostname from prompt
 prompt_context() {}
+
+# 1Password CLI plug-ins
+source /Users/pires/.config/op/plugins.sh
+
+# Disable Homebrew auto-update warnings
+export HOMEBREW_NO_ENV_HINTS=1
+
+# Required for Ansible to run properly.
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
