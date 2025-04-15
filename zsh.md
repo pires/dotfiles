@@ -4,7 +4,8 @@
 
 ```shell
 brew install zsh
-chsh -s /usr/local/bin/zsh
+sudo echo /usr/homebrew/bin/zsh >> /etc/shells
+chsh -s /usr/homebrew/bin/zsh
 ```
 
 ```shell
