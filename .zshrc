@@ -1,6 +1,8 @@
 # tmux integration
 ZSH_TMUX_AUTOSTART=true
 
+export PATH=/opt/homebrew/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -85,7 +87,8 @@ plugins=(
 
 # For more info read https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/ssh-agent
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_ed25519
+zstyle :omz:plugins:ssh-agent lazy yes
+zstyle :omz:plugins:ssh-agent helper sshpass
 zstyle :omz:plugins:ssh-agent lifetime 24h
 
 source $ZSH/oh-my-zsh.sh
@@ -119,11 +122,9 @@ source <(kubectl completion zsh)
 # Remove username@hostname from prompt
 prompt_context() {}
 
-# 1Password CLI plug-ins
-source /Users/pires/.config/op/plugins.sh
-
 # Disable Homebrew auto-update warnings
 export HOMEBREW_NO_ENV_HINTS=1
 
 # Required for Ansible to run properly.
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
