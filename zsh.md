@@ -4,8 +4,9 @@
 
 ```shell
 brew install zsh
-sudo echo /usr/homebrew/bin/zsh >> /etc/shells
-chsh -s /usr/homebrew/bin/zsh
+ZSH_PATH=/opt/homebrew/bin/zsh
+echo $ZSH | sudo tee -a /etc/shells
+chsh -s $ZSH
 ```
 
 ```shell
@@ -13,11 +14,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```
 
 ```shell
-brew tap homebrew/cask-fonts
 brew cask install font-meslo-for-powerline
 ```
-
-Change font to Meslo LG L Regular for Powerline 12pt.
 
 ### Use
 
@@ -27,7 +25,3 @@ cp .zshrc ~/
 
 This will be overwritten by `oh-my-zsh` the first time `zsh` runs but there's a backup you should put back, or just overwrite from here.
 
-## iTerm2
-
-Set-up to load configuration from file and point to this clone.
-Restart iTerm2.
