@@ -19,7 +19,7 @@
 # new window retains current path, possible values are:
 #   - true
 #   - false (default)
-tmux_conf_new_window_retain_current_path=false
+tmux_conf_new_window_retain_current_path=yes
 
 # new pane retains current path, possible values are:
 #   - true (default)
@@ -339,3 +339,4 @@ set -g @continuum-boot-options 'iterm,fullscreen'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
+
