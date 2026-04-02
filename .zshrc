@@ -72,6 +72,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	1password
+	buf
 	colored-man-pages
 	command-not-found
 	extract
@@ -79,14 +80,8 @@ plugins=(
 	git
 	git-extras
 	macos
-	ssh-agent
 	tmux
 )
-
-# For more info read https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/ssh-agent
-zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_ed25519
-zstyle :omz:plugins:ssh-agent lifetime 7d
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,12 +111,16 @@ alias k="kubectl"
 # kubectl completion
 source <(kubectl completion zsh)
 
+# Serena MCP
+alias serena="uv run --project $HOME/work/serena serena"
+
 # Remove username@hostname from prompt
 prompt_context() {}
 
 # 1Password CLI plug-ins
-source /Users/pires/.config/op/plugins.sh
+#source /Users/pires/.config/op/plugins.sh
 
 # Disable Homebrew auto-update warnings
 export HOMEBREW_NO_ENV_HINTS=1
 
+export PATH=`go env GOPATH`/bin:/opt/homebrew/bin:$PATH
