@@ -1,0 +1,44 @@
+[user]
+	name = Pires
+	email = pjpires@gmail.com
+[color]
+	ui = auto
+[core]
+	attributesfile = ~/.gitattributes
+	excludesFile = ~/.gitignore
+	whitespace = space-before-tab,tab-in-indent,trailing-space
+	pager = bat
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+[diff]
+	compactionHeuristic = true
+[diff "color"]
+	old = red strike
+	new = green italic
+#[url "git@github.com:"]
+#	insteadOf = https://github.com/
+[fetch]
+	prune = true
+[pull]
+	prune = true
+	rebase = true
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg "x509"]
+	program = gitsign
+[gitsign]
+	connectorID = https://github.com/login/oauth
+[gpg]
+	format = x509
+[grep]
+	lineNumber = true
+[init]
+	defaultBranch = main
+
